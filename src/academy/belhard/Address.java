@@ -21,5 +21,16 @@ public class Address {
 
     public int getNumberHouse() { return numberHouse; }
 
-    public void setNumberHouse(int numberHouse) { this.numberHouse = numberHouse; }
+    public void setNumberHouse(int numberHouse) throws NullFieldException {
+        if (numberHouse<=0) throw new NullFieldException("efvef");
+        this.numberHouse = numberHouse; }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", numberHouse=" + numberHouse +
+                '}';
+    }
 }
