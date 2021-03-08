@@ -11,7 +11,7 @@ public class Main {
         Person person1 = new Person("Sergei", "Voitehovich", new Address("Minsk", "Glebki", 1));
         Person person2 = new Person("Tom", "Hardy", new Address("London", "Lochaline", 49));
         Person person3 = new Person("Jason", "Statham", new Address("Shirebrook", "Park-road", 36));
-//        System.out.println(person1+ " \n" +person2+"\n"+person3);
+        System.out.println(person1+ " \n" +person2+"\n"+person3);
 
         ArrayList<Person> persons = new ArrayList<>();
         persons.add(person1);
