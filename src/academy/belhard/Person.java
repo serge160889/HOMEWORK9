@@ -31,7 +31,7 @@ public class Person {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", address=" + address +
-                '}';
+                '}'+"\n";
     }
 
 

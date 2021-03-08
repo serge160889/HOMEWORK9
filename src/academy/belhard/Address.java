@@ -5,12 +5,6 @@ public class Address {
     private String street;
     private int numberHouse;
 
-    public Address(String city, String street, int numberHouse) {
-        this.city = city;
-        this.street = street;
-        this.numberHouse = numberHouse;
-    }
-
     public String getCity() { return city; }
 
     public void setCity(String city) { this.city = city; }
@@ -21,9 +15,16 @@ public class Address {
 
     public int getNumberHouse() { return numberHouse; }
 
-    public void setNumberHouse(int numberHouse) throws NullFieldException {
-        if (numberHouse<=0) throw new NullFieldException("efvef");
-        this.numberHouse = numberHouse; }
+    public void setNumberHouse(int numberHouse) { this.numberHouse = numberHouse; }
+
+    public Address(String city, String street, int numberHouse) {
+        this.city = city;
+        this.street = street;
+        this.numberHouse = numberHouse;
+
+    }
+
+
 
     @Override
     public String toString() {
@@ -31,6 +32,6 @@ public class Address {
                 "city='" + city + '\'' +
                 ", street='" + street + '\'' +
                 ", numberHouse=" + numberHouse +
-                '}';
+                '}'+"\n";
     }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         Person person1 = new Person("Sergei", "Voitehovich", new Address("Minsk", "Glebki", 1));
         Person person2 = new Person("Tom", "Hardy", new Address("London", "Lochaline", 49));
@@ -18,8 +18,11 @@ public class Main {
         persons.add(person2);
         persons.add(person3);
 
-        PersonIOUtil.writePersons("Person", persons);
+        PersonIOUtil.writePersons("Person.txt", persons);
         System.out.println("Объекты записаны в файл");
+
+        System.out.println(PersonIOUtil.readPersons("Person.txt"));
+        System.out.println("Объекты считаны из файла");
 
 
 
